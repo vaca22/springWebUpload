@@ -6,8 +6,13 @@ import org.springframework.web.servlet.ModelAndView;
 
 @RestController
 public class StartController {
-    @GetMapping("/")
+    @GetMapping("/serverIndex")
     public ModelAndView hello(){
         return new ModelAndView("index");
+    }
+
+    @GetMapping("/")
+    public ModelAndView login(){
+        return new ModelAndView("login");
     }
 }

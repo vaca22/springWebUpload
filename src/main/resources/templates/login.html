@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<form name='loginForm'>
+    <table width='20%' bgcolor='A09F9F' align='center'>
+        <tr>
+            <td colspan=2>
+                <center><font size=4><b>医养康更新</b></font></center>
+                <br>
+            </td>
+            <br>
+            <br>
+        </tr>
+        <tr>
+            <td>管理员账号:</td>
+            <td><input type='text' size=25 name='userid'><br></td>
+        </tr>
+        <br>
+        <br>
+        <tr>
+            <td>管理员密码:</td>
+            <td><input type='Password' size=25 name='pwd'><br></td>
+            <br>
+            <br>
+        </tr>
+        <tr>
+            <td><input type='submit' onclick='check(this.form)' value='登录'></td>
+        </tr>
+    </table>
+</form>
+<script>
+    function check(form) {
+        if (form.userid.value == 'admin' && form.pwd.value == 'yiyangkang') {
+            window.open('/serverIndex')
+        } else {
+            alert('密码错误')/*displays error message*/
+        }
+    }
+</script>
+</html>
