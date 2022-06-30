@@ -16,24 +16,6 @@ import java.nio.file.Path;
 public class SpringWebUploadApplication {
 
     public static void main(String[] args) throws IOException {
-
-        File fuck=new File("update_yiyangkang.txt");
-        byte[] bytes= Files.readAllBytes(Path.of("update_yiyangkang.txt"));
-        System.out.println(bytes.length);
-        String fileContent=new String(bytes);
-        JSONObject jj=new JSONObject(fileContent);
-        int version=jj.getInt("version");
-        System.out.println(version);
-        version++;
-        jj.put("version",version);
-        String outString=jj.toString();
-        System.out.println(outString);
-        fuck.delete();
-        FileOutputStream out=new FileOutputStream("update_yiyangkang.txt");
-        out.write(outString.getBytes(StandardCharsets.UTF_8));
-        out.close();
-
-
         SpringApplication.run(SpringWebUploadApplication.class, args);
     }
 
